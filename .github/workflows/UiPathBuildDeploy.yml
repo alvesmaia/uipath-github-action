@@ -34,11 +34,9 @@ jobs:
                        {    
                           # Get some data from the package.json for package naming
                           $json = Get-Content "$package" | Out-String | ConvertFrom-Json
-                          $foo = $json.projectVersion
-                          $Name=$json.name
-                          echo "{name}={PATH}" >> $package
+                          $Name = $json.name
                           echo $foo
-                          $v= [version] "$foo"
+                          $v= [version] $json.projectVersion
                           $newversion= "{0}.{1}.{2}.{3}" -f $v.Major, $v.Minor, ($v.Build),"${{github.run_number}}"
                           $VERSION=[string]$newversion
                           echo $VERSION
