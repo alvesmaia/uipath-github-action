@@ -36,7 +36,7 @@ jobs:
                           $json = Get-Content "$package" | Out-String | ConvertFrom-Json
                           $foo = $json.projectVersion
                           $Name=$json.name
-                          echo "::set-output name=PATH::$package"
+                          echo "{name}={PATH}" >> $package
                           echo $foo
                           $v= [version] "$foo"
                           $newversion= "{0}.{1}.{2}.{3}" -f $v.Major, $v.Minor, ($v.Build),"${{github.run_number}}"
