@@ -16,6 +16,7 @@ jobs:
         age: '1 month'
  Build:
     runs-on: windows-latest
+    environment: DEV
     needs: remove-old-artifacts
     steps:            
       # Checkout code from this repo

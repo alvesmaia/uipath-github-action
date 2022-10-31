@@ -6172,7 +6172,7 @@
             "version": "[22.10.3, 22.10.3]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\uipathcli\\lib\\net461\\..\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\alvesmaia\\Desktop\\uipathcli\\uipcli\\uipathCli\\net461\\..\\runtime.json"
       }
     },
     "runtimes": {
@@ -6185,7 +6185,7 @@
     {
       "code": "NU1007",
       "level": "Error",
-      "message": "The runtime.json specified in the project 'C:\\uipathcli\\lib\\net461\\..\\runtime.json' could not be found."
+      "message": "The runtime.json specified in the project 'C:\\Users\\alvesmaia\\Desktop\\uipathcli\\uipcli\\uipathCli\\net461\\..\\runtime.json' could not be found."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "g9nckgYaYdBYtqAV48smdgS6euRLpv5skxxSXCmf9nKN4F0bNTAQ6e6jn3A+lccejECOM2/jyfhyYkyEVgfp+w==",
+  "dgSpecHash": "J+EZ8pf2Z2nkLWdBzgQazHiBZgZNc1DYSDGV6bdGv0QyVRfNEIwXjDgYAjN6eCGDmRmRvtpjKpFeChmtrBZs1w==",
   "success": false,
   "projectFilePath": "C:\\Users\\alvesmaia\\Documents\\UiPath\\uipath-github-action\\.local\\",
   "expectedPackageFiles": [
@@ -72,7 +72,7 @@
       "code": "NU1007",
       "level": "Error",
       "filePath": "C:\\Users\\alvesmaia\\Documents\\UiPath\\uipath-github-action\\.local",
-      "message": "The runtime.json specified in the project 'C:\\uipathcli\\lib\\net461\\..\\runtime.json' could not be found."
+      "message": "The runtime.json specified in the project 'C:\\Users\\alvesmaia\\Desktop\\uipathcli\\uipcli\\uipathCli\\net461\\..\\runtime.json' could not be found."
     }
   ]
 }
