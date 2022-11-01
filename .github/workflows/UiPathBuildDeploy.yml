@@ -7,7 +7,8 @@ on:
     branches: [ "main" ]
 jobs:
  remove-old-artifacts:
-    runs-on: windows-latest
+    # runs-on: windows-latest
+    runs-on: self-hosted
     timeout-minutes: 10
     steps:
     - name: Remove old artifacts
@@ -15,7 +16,8 @@ jobs:
       with:
         age: '1 month'
  Build:
-    runs-on: windows-latest
+    # runs-on: windows-latest
+    runs-on: self-hosted
     environment: DEV
     needs: remove-old-artifacts
     steps:            
