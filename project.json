@@ -1,6 +1,6 @@
 {
-  "name": "hello-world-github-action",
-  "description": "hello-world-github-action",
+  "name": "hello-world",
+  "description": "hello-world",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.System.Activities": "[22.10.3]",
