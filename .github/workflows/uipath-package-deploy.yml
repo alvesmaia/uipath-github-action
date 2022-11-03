@@ -1,0 +1,40 @@
+name: reusable_uipath_workflow
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
+jobs:
+ remove-old-artifacts:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+    - name: Remove old artifacts
+      uses: c-hive/gha-remove-artifacts@v1
+      with:
+        age: '1 month'
+
+ Build:
+    runs-on: windows-latest
+    environment: DEV
+    needs: remove-old-artifacts
+    steps:            
+      - name: Checkout Code
+        uses: actions/checkout@v2      
+
+      - name: Get UiPath CLI
+        uses: ./.github/workflows/uipath-get-cli.yml
+
+      - name: Pack and Deploy
+        uses: ./.github/workflows/uipath-pack-deploy.yml
+
+      # Persist build artifacts
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.2.0
+        with:	 
+             name: ProjectFiles
+             path: ${{ github.workspace }}/**
+             if-no-files-found: error
+             retention-days: 2
